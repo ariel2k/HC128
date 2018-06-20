@@ -56,6 +56,7 @@
             this.btnDecrypt.Text = "Desencriptar imagen";
             this.btnDecrypt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDecrypt.UseVisualStyleBackColor = false;
+            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
             // 
             // btnEncrypt
             // 
@@ -75,7 +76,7 @@
             // FrmHome
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(261, 172);
             this.Controls.Add(this.btnDecrypt);
             this.Controls.Add(this.btnEncrypt);

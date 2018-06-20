@@ -94,7 +94,7 @@
             this.btnUploadImage.BackColor = System.Drawing.Color.White;
             this.btnUploadImage.Enabled = false;
             this.btnUploadImage.Image = global::HC128.Desktop.Properties.Resources.upload;
-            this.btnUploadImage.Location = new System.Drawing.Point(609, 11);
+            this.btnUploadImage.Location = new System.Drawing.Point(612, 11);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(160, 43);
             this.btnUploadImage.TabIndex = 2;
@@ -130,7 +130,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(781, 559);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.txtNameImg);
             this.Controls.Add(this.lblNameImg);
             this.Controls.Add(this.btnWebCam);

@@ -22,5 +22,11 @@ namespace HC128.Desktop
             FrmHC128 frmHC128 = new FrmHC128();
             frmHC128.Show();
         }
+
+        private void btnDecrypt_Click(object sender, EventArgs e)
+        {
+            FrmDecrypt frmDecrypt = new FrmDecrypt();
+            frmDecrypt.Show();
+        }
     }
 }

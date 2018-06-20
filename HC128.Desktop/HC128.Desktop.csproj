@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmDecrypt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDecrypt.Designer.cs">
+      <DependentUpon>FrmDecrypt.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHC128.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,9 @@
     <Compile Include="Models\ImgDTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDecrypt.resx">
+      <DependentUpon>FrmDecrypt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHC128.resx">
       <DependentUpon>FrmHC128.cs</DependentUpon>
     </EmbeddedResource>
