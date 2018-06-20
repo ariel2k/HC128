@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 C:\Repos\HC128\HC128Api
 --output-path=obj\Release\netcoreapp2.0\
 --application-name=HC128.Api
 --content-root=C:\Repos\HC128\HC128Api
-=======
 C:\Users\Ariel\Documents\Github\HC128\HC128Api
 --output-path=obj\Release\netcoreapp2.0\
 --application-name=HC128.Api
 --content-root=C:\Users\Ariel\Documents\Github\HC128\HC128Api
->>>>>>> 2fe5a2d801f0fa2a0aae3d295ea9f92016a726c2
 --file=
