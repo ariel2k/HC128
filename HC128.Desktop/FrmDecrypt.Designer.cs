@@ -91,7 +91,6 @@
             this.btnDecryptImage.Text = "Desencriptar Imagen";
             this.btnDecryptImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDecryptImage.UseVisualStyleBackColor = false;
-            this.btnDecryptImage.Click += new System.EventHandler(this.btnDownloadImage_Click);
             // 
             // picBox
             // 
@@ -137,7 +136,7 @@
             this.txtIPServer.Name = "txtIPServer";
             this.txtIPServer.Size = new System.Drawing.Size(156, 22);
             this.txtIPServer.TabIndex = 10;
-            this.txtIPServer.Text = "127.0.0.1";
+            this.txtIPServer.Text = "127.0.0.1:54986";
             // 
             // lblIpServer
             // 

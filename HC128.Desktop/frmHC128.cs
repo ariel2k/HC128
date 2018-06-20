@@ -91,7 +91,9 @@ namespace HC128.Desktop
 
             string caption = "HC-128";
             string message = "Imagen encriptada exitosamente. \n";
-            message += String.Join("\n",list);
+            message += String.Join("\n",list) + "\n";
+            message += imgapi.imageName + "\n";
+            message += imgapi.imageByteArray + "\n";
 
             MessageBox.Show(this, message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -131,5 +133,6 @@ namespace HC128.Desktop
         {
             //EnableBtns();
         }
+        
     }
 }

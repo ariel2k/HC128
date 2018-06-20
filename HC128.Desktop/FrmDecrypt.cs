@@ -25,21 +25,12 @@ namespace HC128.Desktop
 
         private async Task UpdateListFilesAsync()
         {
-            string responseString = "";
-            List<string> ImageList = new List<string>();
-
-            using (HttpClient client = new HttpClient())
-            {
-                responseString = await client.GetStringAsync("http://localhost/HC128Api/api/image/Names");
-            }
-
-            ImageList = JsonConvert.DeserializeObject<List<string>>(responseString);
+            List<string> ListFiles = await API.GetImageName(txtIPServer.Text);
             listFiles.Items.Clear();
-            foreach (string imageName in ImageList)
+            foreach (string imageName in ListFiles)
             {
                 listFiles.Items.Add(imageName);
-            }
-            
+            }   
         }
 
         private bool BeforeDownloadFile()
@@ -74,27 +65,30 @@ namespace HC128.Desktop
             return true;
         }
 
-        private void DownloadFile()
+        private async Task DecryptFile()
         {
+            ImgAPI imgApi = await API
+                .GetImageDetail(txtIPServer.Text, listFiles.SelectedItem.ToString());
 
+            ImgDTO imgDto = new ImgDTO(
+                listFiles.SelectedItem.ToString()
+                , null
+                , Encoding.ASCII.GetBytes(imgApi.imageByteArray));
+
+            picBox.Image = imgDto.ToBitmap();
         }
 
         private void FrmDecrypt_Load(object sender, EventArgs e)
         {
             
         }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            UpdateListFilesAsync();
-        }
-
-        private void btnDownloadImage_Click(object sender, EventArgs e)
+        
+        private async Task btnDownloadImage_Click(object sender, EventArgs e)
         {
             var isValidated = BeforeDownloadFile();
             if (isValidated)
             {
-                DownloadFile();
+                await DecryptFile();
                 btnDownloadImage.Enabled = true;
             }
         }
@@ -102,6 +96,11 @@ namespace HC128.Desktop
         private void btnDownloadImage_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateListFilesAsync();
         }
     }
 }
