@@ -76,7 +76,9 @@
     <Compile Include="FrmHome.Designer.cs">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\ConvertImg.cs" />
+    <Compile Include="Models\ImgAPI.cs" />
     <Compile Include="Models\ImgDTO.cs" />
     <Compile Include="Models\ImgGrid.cs" />
     <Compile Include="Program.cs" />
