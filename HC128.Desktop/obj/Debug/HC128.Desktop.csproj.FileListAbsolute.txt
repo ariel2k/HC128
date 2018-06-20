@@ -18,3 +18,5 @@ C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.csproj.GenerateResource.cac
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.csproj.CoreCompileInputs.cache
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.exe
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.pdb
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmHome.resources
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmDecrypt.resources

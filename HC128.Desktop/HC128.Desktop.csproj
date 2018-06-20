@@ -45,16 +45,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmDecrypt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDecrypt.Designer.cs">
+      <DependentUpon>FrmDecrypt.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHC128.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmHC128.Designer.cs">
       <DependentUpon>FrmHC128.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConvertImg.cs" />
+    <Compile Include="Models\ImgDTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDecrypt.resx">
+      <DependentUpon>FrmDecrypt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHC128.resx">
       <DependentUpon>FrmHC128.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -64,6 +84,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -77,6 +98,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\upload.ico" />
+    <None Include="Icons\camera.ico" />
+    <None Include="Icons\folder.ico" />
+    <Content Include="Icons\unlock.ico" />
+    <Content Include="Icons\lock.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

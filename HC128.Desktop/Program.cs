@@ -16,7 +16,7 @@ namespace HC128.Desktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmHC128());
+            Application.Run(new FrmHome());
         }
     }
 }
