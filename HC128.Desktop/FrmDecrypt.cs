@@ -17,26 +17,27 @@ namespace HC128.Desktop
             InitializeComponent();
         }
 
+        private void UpdateListFiles()
+        {
+            listFiles.Items.Clear();
+            listFiles.Items.Add("Item 4");
+            listFiles.Items.Add("Item 3");
+            listFiles.Items.Add("Item 1");
+            listFiles.Items.Add("Item 2");
+            listFiles.Items.Add("Item 4");
+            listFiles.Items.Add("Item 3");
+            listFiles.Items.Add("Item 1");
+        }
+
         private void FrmDecrypt_Load(object sender, EventArgs e)
         {
-            gridList.ColumnCount = 1;
-            gridList.Columns[0].Name = "Nombre";
-
-            string[] row = new string[] {"Product 1" };
-            gridList.Rows.Add(row);
-            row = new string[] {"Product 2"};
-            gridList.Rows.Add(row);
-            row = new string[] {"Product 3"};
-            gridList.Rows.Add(row);
-            row = new string[] {"Product 4"};
-            gridList.Rows.Add(row);
-
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-            gridList.Columns.Add(btn);
-            btn.HeaderText = "Descargar";
-            btn.Text = "Descargar";
-            btn.Name = "btn";
-            btn.UseColumnTextForButtonValue = true;
+            UpdateListFiles();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateListFiles();
+        }
+        
     }
 }
