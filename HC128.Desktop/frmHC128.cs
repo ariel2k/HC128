@@ -1,10 +1,13 @@
-﻿using System;
+﻿using HC128.Desktop.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,6 +15,8 @@ namespace HC128.Desktop
 {
     public partial class FrmHC128 : Form
     {
+        private static string IPRegex = @"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$";
+
         public FrmHC128()
         {
             InitializeComponent();
@@ -21,6 +26,44 @@ namespace HC128.Desktop
         private void FrmHC128_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void EnableBtns()
+        {
+            // Enable btn upload 
+            btnUploadImage.Enabled = true;
+            btnUploadImage.BackColor = Color.LimeGreen;
+        }
+
+        private bool ValidateBeforeUpload()
+        {
+            // Errors list
+            List<string> errors = new List<string>();
+
+            // Validate IP Server
+            Regex regex = new Regex(IPRegex);
+            var ipServer = txtIPServer.Text;
+            if (!regex.IsMatch(ipServer))
+                errors.Add("IP Invalida.");
+
+            var img = picBox.Image;
+            if(img == null)
+                errors.Add("No hay una imagen seleccionada.");
+
+            // Validate FileName
+            var fileName = txtNameImg.Text;
+            if(fileName.Length == 0)
+                errors.Add("Debe insertar un nombre.");
+
+            // Show messagebox
+            if (errors.Count() > 0)
+            {
+                string caption = "Error/es encontrados";
+                string message = String.Join("\n", errors);
+                MessageBox.Show(this,message,caption,MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
 
         private void btnSelectImage_Click(object sender, EventArgs e)
@@ -37,12 +80,20 @@ namespace HC128.Desktop
                     // Create a new Bitmap object from the picture file on disk,
                     // and assign that to the PictureBox.Image property
                     picBox.Image = new Bitmap(dlg.FileName);
-
-                    // Enable btn upload 
-                    btnUploadImage.Enabled = true;
-                    btnUploadImage.BackColor = Color.LimeGreen;
+                    txtNameImg.Text = dlg.SafeFileName;
+                    EnableBtns();
                 }
             }
+        }
+
+        private void btnUploadImage_Click(object sender, EventArgs e)
+        {
+            ValidateBeforeUpload();
+        }
+               
+        private void btnWebCam_Click(object sender, EventArgs e)
+        {
+            EnableBtns();
         }
     }
 }
