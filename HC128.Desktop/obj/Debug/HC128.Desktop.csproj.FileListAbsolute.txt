@@ -1,0 +1,10 @@
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.csprojResolveAssemblyReference.cache
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.Properties.Resources.resources
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.csproj.GenerateResource.Cache
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.csproj.CoreCompileInputs.cache
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\HC128.Desktop.exe.config
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\HC128.Desktop.exe
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\HC128.Desktop.pdb
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.exe
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.pdb
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmHC128.resources

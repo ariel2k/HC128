@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HC128.Desktop
 {
-    public partial class Form1 : Form
+    public partial class FrmHC128 : Form
     {
-        public Form1()
+        public FrmHC128()
         {
             InitializeComponent();
         }
