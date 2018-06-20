@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Models\ConvertImg.cs" />
     <Compile Include="Models\ImgDTO.cs" />
+    <Compile Include="Models\ImgGrid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmDecrypt.resx">
@@ -100,6 +101,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Icons\load.ico" />
     <None Include="Icons\upload.ico" />
     <None Include="Icons\camera.ico" />
     <None Include="Icons\folder.ico" />
