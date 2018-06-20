@@ -13106,9 +13106,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repos\\HC128\\HC128Api\\HC128Api.csproj",
-      "projectName": "HC128Api",
-      "projectPath": "C:\\Repos\\HC128\\HC128Api\\HC128Api.csproj",
+      "projectUniqueName": "C:\\Repos\\HC128\\HC128Api\\HC128.Api.csproj",
+      "projectName": "HC128.Api",
+      "projectPath": "C:\\Repos\\HC128\\HC128Api\\HC128.Api.csproj",
       "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
       "outputPath": "C:\\Repos\\HC128\\HC128Api\\obj\\",
       "projectStyle": "PackageReference",
