@@ -30,15 +30,3 @@ C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.csproj.CoreCompileInputs.ca
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.csproj.CopyComplete
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.exe
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.pdb
-<<<<<<< HEAD
-=======
->>>>>>> 9d75fc2eda2dcabea5a2e45e330f6fec8851a024
-C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Net.Http.Formatting.dll
-C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Web.Http.dll
-C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Web.Http.WebHost.dll
-C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Net.Http.Formatting.xml
-C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Web.Http.xml
-C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Web.Http.WebHost.xml
->>>>>>> 2fe5a2d801f0fa2a0aae3d295ea9f92016a726c2
