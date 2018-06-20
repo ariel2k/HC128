@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,6 +13,8 @@ namespace HC128.Desktop
 {
     public partial class FrmDecrypt : Form
     {
+        private static string IPRegex = @"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$";
+
         public FrmDecrypt()
         {
             InitializeComponent();
@@ -29,15 +32,66 @@ namespace HC128.Desktop
             listFiles.Items.Add("Item 1");
         }
 
+        private bool BeforeDownloadFile()
+        {
+            // Errors list
+            List<string> errors = new List<string>();
+
+            // Validate IP Server
+            Regex regex = new Regex(IPRegex);
+            var ipServer = txtIPServer.Text;
+            if (!regex.IsMatch(ipServer))
+                errors.Add("IP Invalida.");
+
+            // Validate FileName
+            var fileName = (string) listFiles.SelectedItem;
+            if (fileName == null)
+                errors.Add("Debe seleccionar un archivo.");
+
+            // Validate FileName
+            var streamKey = txtStreamKey.Text;
+            if (streamKey.Length == 0)
+                errors.Add("Debe insertar una Stream Key.");
+
+            // Show messagebox
+            if (errors.Count() > 0)
+            {
+                string caption = "Error/es encontrados";
+                string message = String.Join("\n", errors);
+                MessageBox.Show(this, message, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        private void DownloadFile()
+        {
+
+        }
+
         private void FrmDecrypt_Load(object sender, EventArgs e)
         {
-            UpdateListFiles();
+            
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             UpdateListFiles();
         }
-        
+
+        private void btnDownloadImage_Click(object sender, EventArgs e)
+        {
+            var isValidated = BeforeDownloadFile();
+            if (isValidated)
+            {
+                DownloadFile();
+                btnDownloadImage.Enabled = true;
+            }
+        }
+
+        private void btnDownloadImage_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

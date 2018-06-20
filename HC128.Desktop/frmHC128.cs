@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -66,6 +67,22 @@ namespace HC128.Desktop
             return true;
         }
 
+        private void Upload()
+        {
+            ImgDTO img = new ImgDTO(txtNameImg.Text, (Bitmap)picBox.Image);
+            var bytesImg = img.ToBytes();
+            string stringImg = System.Text.Encoding.UTF8.GetString(bytesImg);
+                        
+            string caption = "HC-128";
+            string message = "Imagen encriptada exitosamente.";
+            MessageBox.Show(this, message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public void Encrypt()
+        {
+
+        }
+
         private void btnSelectImage_Click(object sender, EventArgs e)
         {
             // Wrap the creation of the OpenFileDialog instance in a using statement,
@@ -91,11 +108,8 @@ namespace HC128.Desktop
             var isValidated = ValidateBeforeUpload();
             if (isValidated)
             {
-                ImgDTO img = new ImgDTO(txtNameImg.Text, (Bitmap)picBox.Image);
-                var bytesImg = img.ToBytes();
-                string caption = "HC-128";
-                string message = "Imagen encriptada exitosamente.";
-                MessageBox.Show(this, message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Encrypt();
+                Upload();
             }
         }
                
