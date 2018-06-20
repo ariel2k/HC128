@@ -105,6 +105,7 @@
     <None Include="Icons\upload.ico" />
     <None Include="Icons\camera.ico" />
     <None Include="Icons\folder.ico" />
+    <None Include="Icons\download.ico" />
     <Content Include="Icons\unlock.ico" />
     <Content Include="Icons\lock.ico" />
   </ItemGroup>

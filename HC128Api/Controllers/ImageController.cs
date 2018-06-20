@@ -34,6 +34,29 @@ namespace HC128Api.Controllers
             return Ok(jsonstring);
         }
 
+        [Route("Names")]
+        [HttpGet]
+        public ActionResult GetNames()
+        {
+            List<string> imageNames = new List<string>();
+            string jsonstring = "[]";
+            try
+            {
+                jsonstring = System.IO.File.ReadAllText(JsonPath);
+                ImageDTOs = JsonConvert.DeserializeObject<List<ImageDTO>>(jsonstring);
+            }
+            catch (Exception)
+            {
+                jsonstring = "[]";
+            }
+            foreach (var ImageDTO in ImageDTOs)
+            {
+                imageNames.Add(ImageDTO.ImageName);
+            }
+            return Ok(imageNames);
+        }
+
+
         // GET: api/Image/5
         [HttpGet("{imageName}", Name = "imageName")]
         public ActionResult Get(string imageName)
