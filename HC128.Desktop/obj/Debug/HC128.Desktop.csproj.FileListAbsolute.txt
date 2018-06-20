@@ -8,16 +8,30 @@ C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\HC128.Desktop.pdb
 C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.exe
 C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.pdb
 C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmHC128.resources
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmHome.resources
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmDecrypt.resources
 C:\Repos\HC128\HC128.Desktop\bin\Debug\HC128.Desktop.exe.config
 C:\Repos\HC128\HC128.Desktop\bin\Debug\HC128.Desktop.exe
 C:\Repos\HC128\HC128.Desktop\bin\Debug\HC128.Desktop.pdb
-C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.csprojAssemblyReference.cache
+C:\Repos\HC128\HC128.Desktop\bin\Debug\Newtonsoft.Json.dll
+C:\Repos\HC128\HC128.Desktop\bin\Debug\System.Net.Http.Formatting.dll
+C:\Repos\HC128\HC128.Desktop\bin\Debug\System.Web.Http.dll
+C:\Repos\HC128\HC128.Desktop\bin\Debug\System.Web.Http.WebHost.dll
+C:\Repos\HC128\HC128.Desktop\bin\Debug\Newtonsoft.Json.xml
+C:\Repos\HC128\HC128.Desktop\bin\Debug\System.Net.Http.Formatting.xml
+C:\Repos\HC128\HC128.Desktop\bin\Debug\System.Web.Http.xml
+C:\Repos\HC128\HC128.Desktop\bin\Debug\System.Web.Http.WebHost.xml
+C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmDecrypt.resources
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmHC128.resources
+C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmHome.resources
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.Properties.Resources.resources
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.csproj.GenerateResource.cache
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.csproj.CoreCompileInputs.cache
+C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.csproj.CopyComplete
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.exe
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.pdb
+<<<<<<< HEAD
+=======
 C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmHome.resources
 C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmDecrypt.resources
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmDecrypt.resources
@@ -30,3 +44,4 @@ C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\Newtonsoft.Json.xm
 C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Web.Http.xml
 C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Web.Http.WebHost.xml
+>>>>>>> 2fe5a2d801f0fa2a0aae3d295ea9f92016a726c2

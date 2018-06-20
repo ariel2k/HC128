@@ -6,6 +6,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
+<<<<<<< HEAD
+    <_PublishTargetUrl>C:\inetpub\wwwroot\HC128Api</_PublishTargetUrl>
+=======
     <_PublishTargetUrl>C:\Users\Ariel\Desktop\HC128\API</_PublishTargetUrl>
+>>>>>>> 2fe5a2d801f0fa2a0aae3d295ea9f92016a726c2
   </PropertyGroup>
 </Project>

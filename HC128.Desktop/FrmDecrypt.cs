@@ -1,9 +1,12 @@
-﻿using System;
+﻿using HC128.Desktop.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -20,16 +23,23 @@ namespace HC128.Desktop
             InitializeComponent();
         }
 
-        private void UpdateListFiles()
+        private async Task UpdateListFilesAsync()
         {
+            string responseString = "";
+            List<string> ImageList = new List<string>();
+
+            using (HttpClient client = new HttpClient())
+            {
+                responseString = await client.GetStringAsync("http://localhost/HC128Api/api/image/Names");
+            }
+
+            ImageList = JsonConvert.DeserializeObject<List<string>>(responseString);
             listFiles.Items.Clear();
-            listFiles.Items.Add("Item 4");
-            listFiles.Items.Add("Item 3");
-            listFiles.Items.Add("Item 1");
-            listFiles.Items.Add("Item 2");
-            listFiles.Items.Add("Item 4");
-            listFiles.Items.Add("Item 3");
-            listFiles.Items.Add("Item 1");
+            foreach (string imageName in ImageList)
+            {
+                listFiles.Items.Add(imageName);
+            }
+            
         }
 
         private bool BeforeDownloadFile()
@@ -76,7 +86,7 @@ namespace HC128.Desktop
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            UpdateListFiles();
+            UpdateListFilesAsync();
         }
 
         private void btnDownloadImage_Click(object sender, EventArgs e)
