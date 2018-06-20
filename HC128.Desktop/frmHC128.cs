@@ -90,7 +90,7 @@ namespace HC128.Desktop
             ImgAPI imgapi = await API.GetImageDetail(txtIPServer.Text, "gatito.jpg");
 
             string caption = "HC-128";
-            string message = "Imagen encriptada exitosamente. \n";
+            string message = "Imagen encriptada exitosamente. OK\n";
             message += String.Join("\n",list) + "\n";
             message += imgapi.imageName + "\n";
             message += imgapi.imageByteArray + "\n";
