@@ -7,17 +7,19 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace HC128.Desktop
 {
     public partial class FrmHC128 : Form
     {
-        private static string IPRegex = @"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$";
-
+        //private static string IPRegex = @"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$";
+       
         public FrmHC128()
         {
             InitializeComponent();
@@ -42,10 +44,11 @@ namespace HC128.Desktop
             List<string> errors = new List<string>();
 
             // Validate IP Server
-            Regex regex = new Regex(IPRegex);
+            //Regex regex = new Regex(IPRegex);
             var ipServer = txtIPServer.Text;
-            if (!regex.IsMatch(ipServer))
-                errors.Add("IP Invalida.");
+            //if (!regex.IsMatch(ipServer))
+            if(ipServer.Length == 0)
+                errors.Add("Debe ingresar una IP.");
 
             var img = picBox.Image;
             if(img == null)
@@ -66,22 +69,29 @@ namespace HC128.Desktop
             }
             return true;
         }
-
-        private void Upload()
+        public Byte[] Encrypt(string nameFile, Bitmap bitmap)
         {
             ImgDTO img = new ImgDTO(txtNameImg.Text, (Bitmap)picBox.Image);
-            var bytesImg = img.ToBytes();
-            string stringImg = System.Text.Encoding.UTF8.GetString(bytesImg);
-                        
+            // return img.Encrypt();
+            return img.ToBytes();
+        }
+
+        private void Upload(string nameFile, Byte[] bytes)
+        {
+            string stringImg = Encoding.UTF8.GetString(bytes);
+            ImgAPI imgAPI = new ImgAPI
+            {
+                imageName = nameFile,
+                imageByteArray = stringImg
+            };
+            
+
+
             string caption = "HC-128";
-            string message = "Imagen encriptada exitosamente.";
+            string message = "Imagen encriptada exitosamente. ";
             MessageBox.Show(this, message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void Encrypt()
-        {
-
-        }
 
         private void btnSelectImage_Click(object sender, EventArgs e)
         {
@@ -108,8 +118,8 @@ namespace HC128.Desktop
             var isValidated = ValidateBeforeUpload();
             if (isValidated)
             {
-                Encrypt();
-                Upload();
+                Byte[] encrypt = Encrypt(txtNameImg.Text, (Bitmap)picBox.Image);
+                Upload(txtNameImg.Text, encrypt);
             }
         }
                

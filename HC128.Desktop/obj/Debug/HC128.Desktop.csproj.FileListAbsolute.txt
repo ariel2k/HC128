@@ -22,3 +22,11 @@ C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmH
 C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmDecrypt.resources
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmDecrypt.resources
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmHome.resources
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Web.Http.dll
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Web.Http.xml
+C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Web.Http.WebHost.xml

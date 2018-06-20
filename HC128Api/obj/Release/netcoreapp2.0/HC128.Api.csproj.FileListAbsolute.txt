@@ -1,0 +1,11 @@
+C:\Users\Ariel\Documents\Github\HC128\HC128Api\bin\Release\netcoreapp2.0\HC128.Api.deps.json
+C:\Users\Ariel\Documents\Github\HC128\HC128Api\bin\Release\netcoreapp2.0\HC128.Api.runtimeconfig.json
+C:\Users\Ariel\Documents\Github\HC128\HC128Api\bin\Release\netcoreapp2.0\HC128.Api.runtimeconfig.dev.json
+C:\Users\Ariel\Documents\Github\HC128\HC128Api\bin\Release\netcoreapp2.0\HC128.Api.dll
+C:\Users\Ariel\Documents\Github\HC128\HC128Api\bin\Release\netcoreapp2.0\HC128.Api.pdb
+C:\Users\Ariel\Documents\Github\HC128\HC128Api\obj\Release\netcoreapp2.0\HC128.Api.csprojResolveAssemblyReference.cache
+C:\Users\Ariel\Documents\Github\HC128\HC128Api\obj\Release\netcoreapp2.0\HC128.Api.csproj.CoreCompileInputs.cache
+C:\Users\Ariel\Documents\Github\HC128\HC128Api\obj\Release\netcoreapp2.0\HC128.Api.AssemblyInfoInputs.cache
+C:\Users\Ariel\Documents\Github\HC128\HC128Api\obj\Release\netcoreapp2.0\HC128.Api.AssemblyInfo.cs
+C:\Users\Ariel\Documents\Github\HC128\HC128Api\obj\Release\netcoreapp2.0\HC128.Api.dll
+C:\Users\Ariel\Documents\Github\HC128\HC128Api\obj\Release\netcoreapp2.0\HC128.Api.pdb

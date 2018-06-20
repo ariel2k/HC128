@@ -55,9 +55,9 @@
             this.txtIPServer.Location = new System.Drawing.Point(477, 31);
             this.txtIPServer.MaxLength = 15;
             this.txtIPServer.Name = "txtIPServer";
-            this.txtIPServer.Size = new System.Drawing.Size(126, 22);
+            this.txtIPServer.Size = new System.Drawing.Size(129, 22);
             this.txtIPServer.TabIndex = 4;
-            this.txtIPServer.Text = "127.0.0.1";
+            this.txtIPServer.Text = "127.0.0.1:54986";
             // 
             // txtNameImg
             // 
