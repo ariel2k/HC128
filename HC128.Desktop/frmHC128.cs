@@ -76,7 +76,7 @@ namespace HC128.Desktop
             return img.ToBytes();
         }
 
-        private async Task<> Upload(string nameFile, Byte[] bytes)
+        private void Upload(string nameFile, Byte[] bytes)
         {
             string stringImg = Encoding.UTF8.GetString(bytes);
             ImgAPI imgAPI = new ImgAPI
@@ -85,7 +85,7 @@ namespace HC128.Desktop
                 imageByteArray = stringImg
             };
 
-            var list = await API.GetImageName(txtIPServer.Text);
+            var list = API.GetImageName(txtIPServer.Text);
 
             string caption = "HC-128";
             string message = "Imagen encriptada exitosamente. ";

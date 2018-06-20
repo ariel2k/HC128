@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,12 +11,16 @@ namespace HC128.Desktop.Models
 {
     public static class API
     {
-        public static async Task<string> GetImageName(string url)
+        public static async Task<List<string>> GetImageName(string url)
         {
-            var client = new HttpClient();
             var path = Path.Combine(url,"/api/Image/Names");
-            HttpResponseMessage response = await client.GetAsync(path);
-            
+            string responseString = "";
+            using (HttpClient client = new HttpClient())
+            {
+                responseString = await client.GetStringAsync(path);
+            }
+
+            return JsonConvert.DeserializeObject<List<string>>(responseString);
         }
     }
 }
