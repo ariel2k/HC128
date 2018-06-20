@@ -28,49 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSelectImage = new System.Windows.Forms.Button();
-            this.picBox = new System.Windows.Forms.PictureBox();
-            this.btnUploadImage = new System.Windows.Forms.Button();
             this.lblIpServer = new System.Windows.Forms.Label();
             this.txtIPServer = new System.Windows.Forms.TextBox();
-            this.btnWebCam = new System.Windows.Forms.Button();
             this.txtNameImg = new System.Windows.Forms.TextBox();
             this.lblNameImg = new System.Windows.Forms.Label();
+            this.btnWebCam = new System.Windows.Forms.Button();
+            this.btnUploadImage = new System.Windows.Forms.Button();
+            this.picBox = new System.Windows.Forms.PictureBox();
+            this.btnSelectImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSelectImage
-            // 
-            this.btnSelectImage.BackColor = System.Drawing.Color.White;
-            this.btnSelectImage.Location = new System.Drawing.Point(12, 12);
-            this.btnSelectImage.Name = "btnSelectImage";
-            this.btnSelectImage.Size = new System.Drawing.Size(77, 42);
-            this.btnSelectImage.TabIndex = 0;
-            this.btnSelectImage.Text = "Seleccionar Imagen";
-            this.btnSelectImage.UseVisualStyleBackColor = false;
-            this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click);
-            // 
-            // picBox
-            // 
-            this.picBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBox.Location = new System.Drawing.Point(12, 60);
-            this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(760, 489);
-            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBox.TabIndex = 1;
-            this.picBox.TabStop = false;
-            // 
-            // btnUploadImage
-            // 
-            this.btnUploadImage.BackColor = System.Drawing.Color.Transparent;
-            this.btnUploadImage.Enabled = false;
-            this.btnUploadImage.Location = new System.Drawing.Point(609, 11);
-            this.btnUploadImage.Name = "btnUploadImage";
-            this.btnUploadImage.Size = new System.Drawing.Size(160, 42);
-            this.btnUploadImage.TabIndex = 2;
-            this.btnUploadImage.Text = "Subir Imagen";
-            this.btnUploadImage.UseVisualStyleBackColor = false;
-            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
             // 
             // lblIpServer
             // 
@@ -92,33 +59,72 @@
             this.txtIPServer.TabIndex = 4;
             this.txtIPServer.Text = "127.0.0.1";
             // 
-            // btnWebCam
-            // 
-            this.btnWebCam.BackColor = System.Drawing.Color.White;
-            this.btnWebCam.Location = new System.Drawing.Point(95, 12);
-            this.btnWebCam.Name = "btnWebCam";
-            this.btnWebCam.Size = new System.Drawing.Size(77, 42);
-            this.btnWebCam.TabIndex = 5;
-            this.btnWebCam.Text = "Foto WebCam";
-            this.btnWebCam.UseVisualStyleBackColor = false;
-            this.btnWebCam.Click += new System.EventHandler(this.btnWebCam_Click);
-            // 
             // txtNameImg
             // 
-            this.txtNameImg.Location = new System.Drawing.Point(181, 33);
+            this.txtNameImg.Location = new System.Drawing.Point(242, 33);
             this.txtNameImg.Name = "txtNameImg";
-            this.txtNameImg.Size = new System.Drawing.Size(283, 20);
+            this.txtNameImg.Size = new System.Drawing.Size(229, 20);
             this.txtNameImg.TabIndex = 7;
             // 
             // lblNameImg
             // 
             this.lblNameImg.AutoSize = true;
             this.lblNameImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameImg.Location = new System.Drawing.Point(178, 15);
+            this.lblNameImg.Location = new System.Drawing.Point(242, 14);
             this.lblNameImg.Name = "lblNameImg";
             this.lblNameImg.Size = new System.Drawing.Size(118, 16);
             this.lblNameImg.TabIndex = 6;
             this.lblNameImg.Text = "Nombre Imagen";
+            // 
+            // btnWebCam
+            // 
+            this.btnWebCam.BackColor = System.Drawing.Color.White;
+            this.btnWebCam.Image = global::HC128.Desktop.Properties.Resources.camera;
+            this.btnWebCam.Location = new System.Drawing.Point(131, 11);
+            this.btnWebCam.Name = "btnWebCam";
+            this.btnWebCam.Size = new System.Drawing.Size(105, 43);
+            this.btnWebCam.TabIndex = 5;
+            this.btnWebCam.Text = "Foto WebCam";
+            this.btnWebCam.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnWebCam.UseVisualStyleBackColor = false;
+            this.btnWebCam.Click += new System.EventHandler(this.btnWebCam_Click);
+            // 
+            // btnUploadImage
+            // 
+            this.btnUploadImage.BackColor = System.Drawing.Color.White;
+            this.btnUploadImage.Enabled = false;
+            this.btnUploadImage.Image = global::HC128.Desktop.Properties.Resources.upload;
+            this.btnUploadImage.Location = new System.Drawing.Point(609, 11);
+            this.btnUploadImage.Name = "btnUploadImage";
+            this.btnUploadImage.Size = new System.Drawing.Size(160, 43);
+            this.btnUploadImage.TabIndex = 2;
+            this.btnUploadImage.Text = "Subir Imagen";
+            this.btnUploadImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUploadImage.UseVisualStyleBackColor = false;
+            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
+            // 
+            // picBox
+            // 
+            this.picBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBox.Location = new System.Drawing.Point(12, 60);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(760, 489);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox.TabIndex = 1;
+            this.picBox.TabStop = false;
+            // 
+            // btnSelectImage
+            // 
+            this.btnSelectImage.BackColor = System.Drawing.Color.White;
+            this.btnSelectImage.Image = global::HC128.Desktop.Properties.Resources.folder;
+            this.btnSelectImage.Location = new System.Drawing.Point(12, 11);
+            this.btnSelectImage.Name = "btnSelectImage";
+            this.btnSelectImage.Size = new System.Drawing.Size(113, 43);
+            this.btnSelectImage.TabIndex = 0;
+            this.btnSelectImage.Text = "Seleccionar Imagen";
+            this.btnSelectImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSelectImage.UseVisualStyleBackColor = false;
+            this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click);
             // 
             // FrmHC128
             // 

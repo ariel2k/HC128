@@ -88,12 +88,20 @@ namespace HC128.Desktop
 
         private void btnUploadImage_Click(object sender, EventArgs e)
         {
-            ValidateBeforeUpload();
+            var isValidated = ValidateBeforeUpload();
+            if (isValidated)
+            {
+                ImgDTO img = new ImgDTO(txtNameImg.Text, (Bitmap)picBox.Image);
+                var bytesImg = img.ToBytes();
+                string caption = "HC-128";
+                string message = "Imagen encriptada exitosamente.";
+                MessageBox.Show(this, message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
                
         private void btnWebCam_Click(object sender, EventArgs e)
         {
-            EnableBtns();
+            //EnableBtns();
         }
     }
 }
