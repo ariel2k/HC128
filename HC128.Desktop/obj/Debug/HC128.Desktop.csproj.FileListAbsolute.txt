@@ -32,12 +32,6 @@ C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.exe
 C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.pdb
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
-C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmHome.resources
-C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmDecrypt.resources
-C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmDecrypt.resources
-C:\Repos\HC128\HC128.Desktop\obj\Debug\HC128.Desktop.FrmHome.resources
 >>>>>>> 9d75fc2eda2dcabea5a2e45e330f6fec8851a024
 C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Ariel\Documents\Github\HC128\HC128.Desktop\bin\Debug\System.Net.Http.Formatting.dll
