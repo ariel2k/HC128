@@ -28,36 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.picboxImagen = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picboxImagen)).BeginInit();
+            this.btnSelectImage = new System.Windows.Forms.Button();
+            this.picBox = new System.Windows.Forms.PictureBox();
+            this.btnUploadImage = new System.Windows.Forms.Button();
+            this.lblIpServer = new System.Windows.Forms.Label();
+            this.txtIPServer = new System.Windows.Forms.TextBox();
+            this.btnWebCam = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // picboxImagen
+            // btnSelectImage
             // 
-            this.picboxImagen.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.picboxImagen.Location = new System.Drawing.Point(12, 12);
-            this.picboxImagen.Name = "picboxImagen";
-            this.picboxImagen.Size = new System.Drawing.Size(260, 157);
-            this.picboxImagen.TabIndex = 0;
-            this.picboxImagen.TabStop = false;
+            this.btnSelectImage.BackColor = System.Drawing.Color.White;
+            this.btnSelectImage.Location = new System.Drawing.Point(12, 12);
+            this.btnSelectImage.Name = "btnSelectImage";
+            this.btnSelectImage.Size = new System.Drawing.Size(143, 42);
+            this.btnSelectImage.TabIndex = 0;
+            this.btnSelectImage.Text = "Selecciona Imagen";
+            this.btnSelectImage.UseVisualStyleBackColor = false;
+            this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click);
+            // 
+            // picBox
+            // 
+            this.picBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBox.Location = new System.Drawing.Point(12, 60);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(760, 489);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox.TabIndex = 1;
+            this.picBox.TabStop = false;
+            // 
+            // btnUploadImage
+            // 
+            this.btnUploadImage.BackColor = System.Drawing.Color.Transparent;
+            this.btnUploadImage.Enabled = false;
+            this.btnUploadImage.Location = new System.Drawing.Point(612, 12);
+            this.btnUploadImage.Name = "btnUploadImage";
+            this.btnUploadImage.Size = new System.Drawing.Size(160, 42);
+            this.btnUploadImage.TabIndex = 2;
+            this.btnUploadImage.Text = "Subir Imagen";
+            this.btnUploadImage.UseVisualStyleBackColor = false;
+            // 
+            // lblIpServer
+            // 
+            this.lblIpServer.AutoSize = true;
+            this.lblIpServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIpServer.Location = new System.Drawing.Point(504, 15);
+            this.lblIpServer.Name = "lblIpServer";
+            this.lblIpServer.Size = new System.Drawing.Size(72, 16);
+            this.lblIpServer.TabIndex = 3;
+            this.lblIpServer.Text = "IP Server";
+            // 
+            // txtIPServer
+            // 
+            this.txtIPServer.Location = new System.Drawing.Point(506, 33);
+            this.txtIPServer.Name = "txtIPServer";
+            this.txtIPServer.Size = new System.Drawing.Size(100, 20);
+            this.txtIPServer.TabIndex = 4;
+            this.txtIPServer.Text = "127.0.0.1";
+            // 
+            // btnWebCam
+            // 
+            this.btnWebCam.BackColor = System.Drawing.Color.White;
+            this.btnWebCam.Location = new System.Drawing.Point(161, 12);
+            this.btnWebCam.Name = "btnWebCam";
+            this.btnWebCam.Size = new System.Drawing.Size(143, 42);
+            this.btnWebCam.TabIndex = 5;
+            this.btnWebCam.Text = "Foto WebCam";
+            this.btnWebCam.UseVisualStyleBackColor = false;
             // 
             // FrmHC128
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.picboxImagen);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btnWebCam);
+            this.Controls.Add(this.txtIPServer);
+            this.Controls.Add(this.lblIpServer);
+            this.Controls.Add(this.btnUploadImage);
+            this.Controls.Add(this.picBox);
+            this.Controls.Add(this.btnSelectImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmHC128";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HC-128 Demo";
-            ((System.ComponentModel.ISupportInitialize)(this.picboxImagen)).EndInit();
+            this.Load += new System.EventHandler(this.FrmHC128_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox picboxImagen;
+        private System.Windows.Forms.Button btnSelectImage;
+        private System.Windows.Forms.PictureBox picBox;
+        private System.Windows.Forms.Button btnUploadImage;
+        private System.Windows.Forms.Label lblIpServer;
+        private System.Windows.Forms.TextBox txtIPServer;
+        private System.Windows.Forms.Button btnWebCam;
     }
 }
