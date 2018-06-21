@@ -91,6 +91,7 @@
             this.btnDecryptImage.Text = "Desencriptar Imagen";
             this.btnDecryptImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDecryptImage.UseVisualStyleBackColor = false;
+            this.btnDecryptImage.Click += new System.EventHandler(this.btnDecryptImage_Click);
             // 
             // picBox
             // 

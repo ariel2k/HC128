@@ -16,7 +16,7 @@ namespace HC128.Desktop
 {
     public partial class FrmDecrypt : Form
     {
-        private static string IPRegex = @"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$";
+        //private static string IPRegex = @"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$";
 
         public FrmDecrypt()
         {
@@ -39,9 +39,10 @@ namespace HC128.Desktop
             List<string> errors = new List<string>();
 
             // Validate IP Server
-            Regex regex = new Regex(IPRegex);
+            //Regex regex = new Regex(IPRegex);
             var ipServer = txtIPServer.Text;
-            if (!regex.IsMatch(ipServer))
+            if (ipServer.Length == 0)
+            //if (!regex.IsMatch(ipServer))
                 errors.Add("IP Invalida.");
 
             // Validate FileName
@@ -70,12 +71,15 @@ namespace HC128.Desktop
             ImgAPI imgApi = await API
                 .GetImageDetail(txtIPServer.Text, listFiles.SelectedItem.ToString());
 
-            ImgDTO imgDto = new ImgDTO(
-                listFiles.SelectedItem.ToString()
-                , null
-                , Encoding.ASCII.GetBytes(imgApi.imageByteArray));
+            //ImgDTO imgDto = new ImgDTO(
+            //    listFiles.SelectedItem.ToString()
+            //    , null
+            //    , Encoding.ASCII.GetBytes(imgApi.imageByteArray));
 
-            picBox.Image = imgDto.ToBitmap();
+            Byte[] bytes = Encoding.ASCII.GetBytes(imgApi.imageByteArray);
+            Bitmap bitmap = ConvertImg.ToBitMap(bytes);
+
+            picBox.Image = bitmap;
         }
 
         private void FrmDecrypt_Load(object sender, EventArgs e)
@@ -83,16 +87,6 @@ namespace HC128.Desktop
             
         }
         
-        private async Task btnDownloadImage_Click(object sender, EventArgs e)
-        {
-            var isValidated = BeforeDownloadFile();
-            if (isValidated)
-            {
-                await DecryptFile();
-                btnDownloadImage.Enabled = true;
-            }
-        }
-
         private void btnDownloadImage_Click_1(object sender, EventArgs e)
         {
 
@@ -101,6 +95,16 @@ namespace HC128.Desktop
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             UpdateListFilesAsync();
+        }
+
+        private void btnDecryptImage_Click(object sender, EventArgs e)
+        {
+            var isValidated = BeforeDownloadFile();
+            if (isValidated)
+            {
+                DecryptFile();
+                btnDownloadImage.Enabled = true;
+            }
         }
     }
 }

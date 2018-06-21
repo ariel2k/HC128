@@ -78,22 +78,23 @@ namespace HC128.Desktop
 
         private async Task Upload(string nameFile, Byte[] bytes)
         {
-            string stringImg = Encoding.UTF8.GetString(bytes);
+            string stringImg = Encoding.ASCII.GetString(bytes);
             ImgAPI imgAPI = new ImgAPI
             {
                 imageName = nameFile,
                 imageByteArray = stringImg
             };
 
-            List<string> list = await API.GetImageName(txtIPServer.Text);
+            //List<string> list = await API.GetImageName(txtIPServer.Text);
 
             ImgAPI imgapi = await API.GetImageDetail(txtIPServer.Text, "gatito.jpg");
 
             string caption = "HC-128";
             string message = "Imagen encriptada exitosamente. OK\n";
-            message += String.Join("\n",list) + "\n";
-            message += imgapi.imageName + "\n";
-            message += imgapi.imageByteArray + "\n";
+            //message += stringImg + "\n";
+            //message += String.Join("\n",list) + "\n";
+            //message += imgapi.imageName + "\n";
+            //message += imgapi.imageByteArray + "\n";
 
             MessageBox.Show(this, message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

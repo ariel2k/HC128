@@ -34,5 +34,15 @@ namespace HC128.Desktop.Models
 
             return JsonConvert.DeserializeObject<ImgAPI>(responseString);
         }
+
+        public static async Task PostImage(string url, ImgAPI imgApi)
+        {
+            var path = url + @"/api/Image";
+            HttpResponseMessage Response;
+            using (HttpClient client = new HttpClient())
+            {
+                Response = await client.PostAsJsonAsync("http://" + path, imgApi);
+            }
+        }
     }
 }
